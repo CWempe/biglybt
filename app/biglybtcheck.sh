@@ -24,5 +24,6 @@ fi
 
 # /usr/local/biglybt is necessary for auto-update to work correctly
 if [ -n "${USER}" ]; then
-  chown -R ${USER}.${USER} ${HOME} /usr/local/biglybt /in /out
+  chmod 775 /in /in/autoload /in/torrents /out /out/torrents /out/complete /out/processing ${HOME}/.biglybt
+  chown -R ${USER}.${GROUP} ${HOME} /usr/local/biglybt /in /out
 fi
